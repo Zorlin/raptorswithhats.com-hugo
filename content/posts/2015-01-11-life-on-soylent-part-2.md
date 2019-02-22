@@ -2,7 +2,7 @@
 title: "Life on Soylent: Part 2"
 date: 2015-01-11T20:31:02-08:00
 Categories: 
-Tags: [soylent]
+Tags: [food, soylent, health]
 ---
 
 So there's something about Soylent that sucks.
