@@ -2,3 +2,16 @@ baseURL = "http://raptorswithhats.com/"
 languageCode = "en-us"
 title = "Raptors With Hats"
 theme = "hyde-hyde"
+
+[params]
+  description = "A blog talking about informal subjects, coding, cryptocurrency and systems administration."
+  Author = "Benjamin Arntzen"
+  GitHubUser = "zorlin"
+  SidebarRecentLimit = 5
+  themeColor = "theme-base-08"
+
+[params.social]
+  twitter = "gnomethrower"
+  github = "Zorlin"
+  linkedin = "Zorlin"
+  email = "Benjamin@RaptorsWithHats.com"
