@@ -5,8 +5,6 @@ Categories: [hml]
 Tags: [habits, health, biohacking, sleep]
 ---
 
-*This post is part of a series. If you're interested in reading the rest of it, click [here](/categories/hml/).*
-
 I haven't been posting here for a while.
 
 As it turns out, habits are hard to keep. I thought about how to deal with the awkward numbering of this series, and I decided to simply increment the day only when I write a post.
@@ -42,3 +40,5 @@ Currently on my productivity to-do list:
 Yes, those last two are habits, but those are the habits I feel are worth sharing at the moment.
 
 Finally, I'm thinking of a new rule - always have a bath after maxing a day at work (IE: coming home at 10pm). Ideally I would do literally nothing but come home, run a bath and go straight to bed - relaxation time is crucial, and the bath is a great way to wind down.
+
+*This post is part of a series. If you're interested in reading the rest of it, click [here](/categories/hml/).*

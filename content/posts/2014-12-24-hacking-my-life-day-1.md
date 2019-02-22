@@ -5,8 +5,6 @@ Categories: ["HML"]
 Tags: ["sleep", "productivity", "programming"]
 ---
 
-*This post is part of a series. If you're interested in reading the rest of it, click [here](/categories/hml/).*
-
 I did something today which may or may not throw me off my schedule - I kept falling back asleep. I was tired, but that's not why I did it. I had two fascinating dreams and I needed to see how they ended. I'd write them here but they were both a little bizarre.
 
 So instead of waking up before 9:00am on a "weekend" (or holiday, as it were), I woke up at around 12:30pm. Not a great start, I suppose.
@@ -38,3 +36,5 @@ I may also post an update about learning to program later tonight.
 Merry almost-Christmas, and Happy Holidays.
 
 ~ b
+
+*This post is part of a series. If you're interested in reading the rest of it, click [here](/categories/hml/).*

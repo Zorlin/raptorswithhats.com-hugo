@@ -5,8 +5,6 @@ Categories: [hml]
 Tags: [khanacademy, sql, programming]
 ---
 
-*This post is part of a series. If you're interested in reading the rest of it, click [here](/categories/hml/).*
-
 Really, this post should be titled *Hacking My Life: Day 2 - In Which Benjamin Does a Thing*.
 
 Had an excellent Christmas with friends and family, so I've been busy most of the day. I did get to lug my Chromebook to and from a lunch/dinner party and was thus able to work on learning SQL - I did the "Hour of Databases" on Khan Academy.
@@ -64,3 +62,5 @@ SELECT id FROM customers ORDER BY id DESC LIMIT 1; /* How many customers? */
 SELECT id FROM inventory ORDER BY id DESC LIMIT 1; /* How many items in our inventory? */
 
 {{< / highlight >}}
+
+*This post is part of a series. If you're interested in reading the rest of it, click [here](/categories/hml/).*

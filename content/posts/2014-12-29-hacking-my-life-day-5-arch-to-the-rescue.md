@@ -5,8 +5,6 @@ Categories: [hml]
 Tags: [everyman, arch, linux, "arch linux"]
 ---
 
-*This post is part of a series. If you're interested in reading the rest of it, click [here](/categories/hml/).*
-
 So I wasn't successful in switching to the Everyman E3 sleep schedule. I'm still curious about it and will probably try again, but I had a full sleep and loved it. I will need to figure out how it'll affect my work.
 
 Anyways, today's post is about a dilemma I found myself in earlier today. I <strike>had</strike> wanted to reinstall my Arch Linux install to get a fresh start, so I booted into Arch via DriveDroid and proceeded to (try) to reinstall it. Immediately after wiping it I realized I didn't have an internet connection...
@@ -33,3 +31,5 @@ Open VirtualBox **as an Administrator** and create a new VM. Call it "Arch" - th
 Follow the wizard until it asks for a disk. Select "Use an existing virtual hard drive file" and point it at your VMDK. Follow the rest of the wizard and assign your Arch Linux ISO to it.
 
 Start the VM and follow the install process. Once you're finished, cleanly shut it down and reboot - you should boot straight into your new Linux machine! Magic!
+
+*This post is part of a series. If you're interested in reading the rest of it, click [here](/categories/hml/).*

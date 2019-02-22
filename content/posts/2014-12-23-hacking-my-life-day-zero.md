@@ -5,8 +5,6 @@ Categories: ["HML"]
 Tags: ["sleep", "productivity"]
 ---
 
-*This post is part of a series. If you're interested in reading the rest of it, click [here](/categories/hml/).*
-
 Today I'm going to start a series of posts I've decided to call "Hacking My Life".
 
 I am a systems administrator and I have never really had excellent organizational skills. Over the next month I intend to change that.
@@ -76,3 +74,5 @@ This is a rough list of what I'm going to try to do every day:
 So Anyways
 ----------
 That's the plan so far. It'll be interesting to see how it goes.
+
+*This post is part of a series. If you're interested in reading the rest of it, click [here](/categories/hml/).*
