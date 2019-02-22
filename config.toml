@@ -1,4 +1,4 @@
-baseURL = "http://raptorswithhats.com/"
+baseURL = "https://hugo.raptorswithhats.com/"
 languageCode = "en-us"
 title = "Raptors With Hats"
 theme = "hyde-hyde"
