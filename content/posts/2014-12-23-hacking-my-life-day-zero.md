@@ -1,6 +1,6 @@
 ---
 title: "Hacking My Life: Day Zero"
-date: 2014-12-23T15:36:52-08:00
+date: 2014-12-23T12:36:52-08:00
 Categories: ["HML"]
 Tags: ["sleep", "productivity"]
 ---
