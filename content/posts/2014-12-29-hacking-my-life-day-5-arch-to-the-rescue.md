@@ -1,6 +1,5 @@
 ---
 title: "Hacking My Life: Day 5 - Arch to the Rescue"
-
 date: 2014-12-29T17:22:20-08:00
 Categories: [hml]
 Tags: [everyman, arch, linux, "arch linux"]
