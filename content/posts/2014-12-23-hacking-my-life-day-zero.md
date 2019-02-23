@@ -9,7 +9,7 @@ Today I'm going to start a series of posts I've decided to call "Hacking My Life
 
 I am a systems administrator and I have never really had excellent organizational skills. Over the next month I intend to change that.
 
-A number of things in my life need to change, for various reasons. I need to get better and more regular sleep, sort out my work schedule, look after my life better in general and most importanly - be productive. This month I am issuing myself a challenge: *do more in one month than you have done in the last year*. This applies to both work and my own personal projects.
+A number of things in my life need to change, for various reasons. I need to get better and more regular sleep, sort out my work schedule, look after my life better in general and most importantly - be productive. This month I am issuing myself a challenge: *do more in one month than you have done in the last year*. This applies to both work and my own personal projects.
 
 <!-- more -->
 
@@ -42,11 +42,9 @@ The plan is to divide the day into 8 1-hour blocks - 55 minutes of work, 5 minut
 
 Combating Burnout
 -----------------
-I'm compiling a list of things I am not going to allow myself to work on while I'm at home. I'm doing this because I've found when I play with those technologies at home I end up spending 6 hours on them, fixing nothing and then going to sleep at some insane hour of the morning.
+I'm going to try to avoid working on anything too complicated while at home. It's too easy to fall down a rabbit hole and lose 6 hours otherwise.
 
 Additionally, I will no longer let myself stay at work past 7pm. Ever.
-
-If you're curious, [this is the list]({{root_url}}/banned-technology). I expect it to grow.
 
 Flexible Scheduling
 -------------------

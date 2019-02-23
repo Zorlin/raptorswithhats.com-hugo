@@ -13,11 +13,11 @@ What was amusing once I was awake, however, was Google Now. I have it activated 
 
 <!-- more -->
 
-I don't blame it for being confused at the sharp and sudden change in schedule. My actual work times were usually around 1:30-2:00pm and I'd stay until I was too tired to stay any longer or there was nothing I could think to do. I'd love to say I averaged 8 hours a day but there was probably a week or two where I definitely didn't. Making these changes is pretty important to keep things fair to my coworkers. So how did things slide so far?
+I don't blame it for being confused at the sharp and sudden change in schedule. I would start work around 1:30-2:00pm and I'd stay until I was too tired to stay any longer or there was nothing I could think to do. I'd love to say I averaged 8 hours a day but there was probably a week or two where I definitely didn't. Making these changes is pretty important to keep things fair to my coworkers. So how did things slide so far?
 
 Well, a long time ago I was working from between 9am to 12pm and until 9pm to 12pm. Almost every single day was 10-14 hours long and I became obsessed with my work. When I got home I'd work more, or play video games. There was literally zero work-life balance and it sent my life into a pretty crappy place for a while. As a result, I had a LOT of comp-time built up.
 
-Eventually the sleep deprivation and stress got to me in a big way. After taking a break from work to recover, I came back determined I wouldn't let the balance go out of whack again - and for the most part I was successful. Unfortunately I am a tinkerer by nature, so I'd often spend late nights playing with stuff at home, thus the "banned technology" list. 
+Eventually the sleep deprivation and stress got to me in a big way. After taking a break from work to recover, I came back determined I wouldn't let the balance go out of whack again - and for the most part I was successful. Unfortunately I am a tinkerer by nature, so I'd often spend late nights playing with stuff at home. 
 
 Anyways, the point is I was able to live a somewhat crazy schedule because I could easily make the argument that the comp-time covered it. Had I been using that time solely to take days off work and take time off at the end of the day, it likely wouldn't have inconvenienced anyone.
 

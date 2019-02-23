@@ -30,6 +30,7 @@ Part of the problem with remote work is that I really, really badly want to remo
 I'm also trying to figure out how to help my team be more productive, which is sort of cheating, but there are some things at work that are affecting my productivity that can only really be solved with their help.
 
 Currently on my productivity to-do list:
+
 * Find a windowing desktop environment that I like and that works
 * Get Arch Linux properly installed at home (Don't... even ask. It's being a PITA, and having a wireless card that is unsupported is not helping).
 * Get better at habits
