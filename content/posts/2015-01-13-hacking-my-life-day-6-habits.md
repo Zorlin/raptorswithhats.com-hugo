@@ -32,7 +32,7 @@ I'm also trying to figure out how to help my team be more productive, which is s
 Currently on my productivity to-do list:
 
 * Find a windowing desktop environment that I like and that works
-* Get Arch Linux properly installed at home (Don't... even ask. It's being a PITA, and having a wireless card that is unsupported is not helping).
+* Get Arch Linux properly installed at home
 * Get better at habits
 * Implement a proper nested/dependency-supporting task tracking system at work (We're currently using a wiki with flat tasks, which does not work excellently but works well for what it is).
 * Never go to bed after midnight (I'm mostly already doing this - ironically it's 12:07am right now, but I had to clean some stuff up and I'm going to bed right after this).
