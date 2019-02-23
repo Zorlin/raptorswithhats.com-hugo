@@ -5,7 +5,7 @@ theme = "hyde-hyde"
 
 [params]
   description = "A blog talking about informal subjects, coding, cryptocurrency and systems administration."
-  Author = "Benjamin Arntzen"
+  author = "Benjamin Arntzen"
   GitHubUser = "zorlin"
   SidebarRecentLimit = 5
   themeColor = "theme-base-08"
@@ -15,3 +15,16 @@ theme = "hyde-hyde"
   github = "Zorlin"
   linkedin = "Zorlin"
   email = "Benjamin@RaptorsWithHats.com"
+
+## Main Menu
+
+[[menu.main]]
+    name = "Home"
+    identifier = "home"
+    weight = 100
+    url = "/"
+[[menu.main]]
+    name = "Posts"
+    weight = 200
+    identifier = "posts"
+    url = "/posts/"
