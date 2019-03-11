@@ -191,6 +191,8 @@ You may need to enter the address of your master in the text box that appears:
 Once you do so, the web interface should pop up.
 ![MooseFS management interface](/img/2019-03-12-mfs2.png)
 
+Once you start adding data, you'll notice that chunks are being created but are marked in the web interface as being "undergoal". This is normal and happens because the default goal for MooseFS directories and files is "2" - which means it will try to ensure they exist on at least 2 chunkservers.
+
 ## Going Into "Production"
 Now that I had a functional MooseFS filesystem, it was time to add content and users.
 
@@ -231,3 +233,7 @@ sudo systemctl enable moosefs-chunkserver
 {{< / highlight >}}
 
 And rebooted the node to see if everything came up cleanly. (It did).
+
+Next time, we'll be adding a second node to the cluster.
+
+*This post is part of a series. If you're interested in reading the rest of it, click [here](/tags/elasticnas/).*

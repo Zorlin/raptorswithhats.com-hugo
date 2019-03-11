@@ -79,3 +79,5 @@ I then unmounted the disk and created an /etc/fstab entry:
 It should cleanly mount when you run "mount -a".
 
 That worked, so the brick is ready to go. The next steps will be some basic benchmarking, setting up MooseFS and adopting this first brick, and some housekeeping. That's a job for tomorrow.
+
+*This post is part of a series. If you're interested in reading the rest of it, click [here](/tags/elasticnas/).*
