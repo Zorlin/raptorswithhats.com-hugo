@@ -24,7 +24,7 @@ Now check it out again...
 {{< highlight bash >}}
 wings@blinky:~# df -h
 Filesystem           Size  Used Avail Use% Mounted on
-/dev/sda             3.6T   90M  3.6T   1% /lfsbrick
+/dev/sda             3.6T   90M  3.6T   1% /mfsbrick
 {{< / highlight >}}
 
 Much better.
@@ -72,12 +72,12 @@ wings@blinky:~/moosefs-3.0.103$ sudo checkinstall
 {{< / highlight >}}
 
 ## Creating the MooseFS users and groups
-As the MooseFS components run as mfs:mfs by default, I created an appropriate user + group, and ensured it owned /var/lib/mfs + /lfsbrick
+As the MooseFS components run as mfs:mfs by default, I created an appropriate user + group, and ensured it owned /var/lib/mfs + /mfsbrick
 
 {{< highlight bash >}}
 sudo adduser --no-create-home mfs
 sudo chown mfs:mfs /var/lib/mfs
-sudo chown mfs:mfs /lfsbrick
+sudo chown mfs:mfs /mfsbrick
 {{< / highlight >}}
 
 I chose to set a null password to prevent logins as this user, and set its shell to /bin/false.
@@ -124,7 +124,7 @@ Then edited the configuration:
 wings@blinky:~$ cd /etc/mfs
 # Set MASTER_HOST = 10.1.1.201 and uncomment it
 sudo nano mfschunkserver.cfg
-# Add /lfsbrick to the end of the file
+# Add /mfsbrick to the end of the file
 sudo nano mfshdd.cfg
 {{< / highlight >}}
 

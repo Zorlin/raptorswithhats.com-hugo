@@ -58,9 +58,9 @@ Now it was time for the star of the show: blinky's hard drive. Some grepping aro
 # Lay down an FS.   
 root@blinky:~# mkfs.ext4 /dev/sda  
 # Make our brick directory  
-root@blinky:~# mkdir /lfsbrick
-# Mount our brick as /lfsbrick/  
-root@blinky:~# mount /dev/sda /lfsbrick/
+root@blinky:~# mkdir /mfsbrick
+# Mount our brick as /mfsbrick/  
+root@blinky:~# mount /dev/sda /mfsbrick/
 {{< / highlight >}}
 
 I checked out the newly mounted brick:
@@ -68,12 +68,12 @@ I checked out the newly mounted brick:
 {{< highlight bash >}}
 root@blinky:~# df -h  
 Filesystem      Size  Used Avail Use% Mounted on  
-/dev/sda        3.6T   89M  3.4T   1% /lfsbrick
+/dev/sda        3.6T   89M  3.4T   1% /mfsbrick
 {{< / highlight >}}
 
 I then unmounted the disk and created an /etc/fstab entry:
 {{< highlight fstab >}}
-/dev/sda /lfsbrick ext4 nodev,noatime,nodiratime 0 2
+/dev/sda /mfsbrick ext4 nodev,noatime,nodiratime 0 2
 {{< / highlight >}}
 
 It should cleanly mount when you run "mount -a".
