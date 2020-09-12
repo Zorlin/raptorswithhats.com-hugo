@@ -51,9 +51,10 @@ I figured the difference was worth it for the peace of mind in case I ran into a
 Once I had my board in hand, I would set up a basic single-node installation on it, and determine if the speeds, latency and reliability were good enough to justify continuing. If they were, I would buy 3 more nodes and expand the cluster to span all 4.
 
 Shopping list (Prices in AUD):
+
 * ODROID HC2 + Power supply + Case ($160)
 * 16GB microSD card ($25)
 * 4TB WD RED drive ($180)
 * Network cable ($3)
 
-
+Tune in next time to see what happened after the first HC2 arrived, and what the setup process looked like.
