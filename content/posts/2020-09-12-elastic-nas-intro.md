@@ -49,9 +49,7 @@ The first step was to evaluate whether this would be a good idea. I figured I wo
 
 I figured the difference was worth it for the peace of mind in case I ran into any issues. All up, the first board cost me about $160 including power supply and some accessories, such as a "case".
 
-Once I had my board in hand, I would set up a basic single-node installation on it, and determine if the speeds, latency and reliability were good enough to justify continuing. If they were, I would buy 3 more nodes and expand the cluster to span all 4.
-
-Here's what I would need:
+Once I had my board in hand, I would set up a basic single-node installation on it, and determine if the speeds, latency and reliability were good enough to justify continuing. If they were, I would buy 3 more nodes and expand the cluster to span all 4. Here's what I would need...
 
 Shopping list (Prices in AUD):
 
