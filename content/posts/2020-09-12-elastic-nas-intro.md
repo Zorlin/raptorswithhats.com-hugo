@@ -9,6 +9,7 @@ draft: false
 My first NAS was a QNAP TS-412, a 4-bay NAS which served for years as a place to store photos, videos and backups with relative ease. It cost around $650 when brand new. When I moved out after getting my first apartment, the QNAP stayed behind to continue dutifully serving those roles for my family.
 
 After moving, I knew I wanted a NAS of my own. I had loved the QNAP, but it had a few issues:
+
 * It took forever to boot - sometimes as long as 15 minutes.
 * Changing the RAID layout was possible but difficult and nerve-racking.
 * It had a fairly weak processor - with only 256MB of RAM and a single-core Marvell CPU.
