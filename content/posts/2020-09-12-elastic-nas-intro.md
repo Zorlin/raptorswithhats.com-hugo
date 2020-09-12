@@ -1,6 +1,6 @@
 ---
 title: "The Elastic NAS: Introduction"
-date: 2019-09-12T13:50:37+08:00
+date: 2020-09-12T13:50:37+08:00
 Categories: [storage]
 Tags: ['storage','nas','elasticnas','moosefs']
 draft: false
