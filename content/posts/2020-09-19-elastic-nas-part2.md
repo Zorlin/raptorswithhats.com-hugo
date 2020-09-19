@@ -116,7 +116,7 @@ Finally, I went into my router and created a static DHCP lease, permanently givi
 
 ![Creating a static lease](/img/2020-09-19-hc2-router-staticlease.png)
 
-A quick reboot later, the HC2 has picked up the address and is now ready for action.
+A quick reboot later, the HC2 had picked up the address and was ready for action.
 
 {{< highlight bash >}}
 root@odroid:~# reboot
@@ -128,7 +128,7 @@ root@blinky:~#
 {{< / highlight >}}
 
 ## Setting up the hard drive
-Now that the basic OS stuff is out of the way, I needed to set up the hard drive. Fortunately, on the HC2 the hard drive always shows up as “/dev/sda”, which makes things pretty easy. Since the MooseFS developers recommend using the XFS filesystem for bricks, I went with XFS. 
+Now that the basic OS stuff was out of the way, I needed to set up the hard drive. Fortunately, on the HC2 the hard drive always shows up as “/dev/sda”, which makes things pretty easy. Since the MooseFS developers recommend using the XFS filesystem for bricks, I went with XFS. 
 
 For simplicity, I didn’t create any partitions, opting to lay the new XFS filesystem directly onto the disk and mount it. If you didn’t know that was possible, you’re one of [today’s lucky 10,000](https://xkcd.com/1053/). Anyways, here’s the procedure.
 
