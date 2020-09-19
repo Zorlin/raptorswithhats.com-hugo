@@ -89,3 +89,14 @@ Finally, I went into my router and created a static DHCP lease, permanently givi
 ![Creating a static lease](/img/2020-09-19-hc2-router-staticlease.png)
 
 A quick reboot later, the HC2 has picked up the address and is now ready for action.
+
+{{< highlight bash >}}
+root@odroid:~# reboot
+Connection to 10.1.1.6 closed by remote host.
+Connection to 10.1.1.6 closed.
+rain:~ wings$ ssh root@10.1.1.201
+root@10.1.1.201's password:
+root@blinky:~#
+{{< / highlight >}}
+
+## Setting up the hard drive
