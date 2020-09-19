@@ -1,5 +1,5 @@
 ---
-title: "The Elastic NAS: Part 1 - Setting up the ODROID HC2"
+title: "The Elastic NAS: Part 2 - Setting up the ODROID HC2"
 date: 2020-09-19T12:09:37+08:00
 Categories: [storage]
 Tags: ['storage','nas','elasticnas','moosefs']

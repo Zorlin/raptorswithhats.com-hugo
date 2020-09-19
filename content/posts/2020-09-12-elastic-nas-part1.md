@@ -1,5 +1,5 @@
 ---
-title: "The Elastic NAS: Introduction"
+title: "The Elastic NAS: Part 1 - Introduction"
 date: 2020-09-12T13:50:37+08:00
 Categories: [storage]
 Tags: ['storage','nas','elasticnas','moosefs']
