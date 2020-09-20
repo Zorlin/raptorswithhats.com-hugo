@@ -126,18 +126,81 @@ Installing with make install...
 
 At this stage, MooseFS was installed and I had a nice package I could use for future purposes. Notably, this install included all the MooseFS services, but they are all disabled by default anyways.
 
-Finally, I created a MooseFS system user.
+Finally, I created a MooseFS user, then gave it ownership of the MooseFS data directory.
 
 {{< highlight plaintext >}}
 wings@blinky:~$ sudo useradd --no-create-home --shell /bin/false mfs
+wings@blinky:~$ sudo chown -R mfs:mfs /var/lib/mfs/
 {{< / highlight >}}
 
 ## Master
-The first service I needed to configure was the MooseFS master. The master is responsible for looking after the metadata of the cluster and overseeing its operations. There are three configuration files that are important for the master service, but only one required any changes.
+The first service I needed to configure was the MooseFS master. The master is responsible for looking after the metadata of the cluster and overseeing its operations.
 
+First, I set up the configuration files for the master:
 {{< highlight plaintext >}}
 # Change to the MooseFS configuration directory
 wings@blinky:~$ cd /etc/mfs/
 # Copy the example configurations into place
-
+wings@blinky:/etc/mfs$ sudo cp mfsmaster.cfg.sample mfsmaster.cfg
+wings@blinky:/etc/mfs$ sudo cp mfsexports.cfg.sample mfsexports.cfg
 {{< / highlight >}}
+
+Since there was no metadata file yet, I needed to create one for the master to start with. I used the blank example provided. (You should only have to do this once. On an operational cluster, this command will wipe the metadata clean, so be careful!)
+{{< highlight plaintext >}}
+sudo cp /var/lib/mfs/metadata.mfs.empty /var/lib/mfs/metadata.mfs
+{{< / highlight >}}
+
+Now I could start and enable the master service.
+{{< highlight plaintext >}}
+wings@blinky:/etc/mfs$ sudo systemctl enable moosefs-master && sudo systemctl start moosefs-master
+{{< / highlight >}}
+
+## Chunkserver
+Next up, I had to configure the MooseFS chunkserver service. 
+
+First up, I copied the example configuration files into place.
+
+{{< highlight plaintext >}}
+# Change to the MooseFS configuration directory
+wings@blinky:~$ cd /etc/mfs/
+# Copy the example configurations for the chunkserver
+wings@blinky:/etc/mfs$ sudo cp mfschunkserver.cfg.sample mfschunkserver.cfg
+wings@blinky:/etc/mfs$ sudo cp mfshdd.cfg.sample mfshdd.cfg
+{{< / highlight >}}
+
+Then I had to make two changes. First off, within the main chunkserver config file...
+{{< highlight plaintext >}}
+wings@blinky:/etc/mfs$ sudo nano mfschunkserver.cfg
+{{< / highlight >}}
+
+I had to set the following option - "MASTER_HOST = 10.1.1.201".
+
+The second change was to give the chunkserver a list of its bricks (or in this case, brick).
+
+It's possible to point it straight at the brick's mountpoint - /mfsbrick/ - but I prefer to create a folder within the brick and tell MooseFS to use that instead. This way, if the brick isn't mounted for whatever reason, the chunkserver will fail to start rather than ending up in a weird state.
+
+{{< highlight plaintext >}}
+# Create a folder for the chunkserver to use
+wings@blinky:~$ sudo mkdir /mfsbrick/moosebox && sudo chown mfs:mfs /mfsbrick/moosebox
+# Edit the list of bricks
+wings@blinky:~$ sudo nano /etc/mfs/mfshdd.cfg
+# Add the following line and save it
+/mfsbrick/moosebox
+{{< / highlight >}}
+
+Start and enable the chunkserver service.
+{{< highlight plaintext >}}
+wings@blinky:~$ systemctl enable moosefs-chunkserver && systemctl start moosefs-chunkserver
+{{< / highlight >}}
+
+## Web interface
+The final service was “moosefs-cgiserv”, which provides a web interface for MooseFS. Unlike the other services, it doesn’t require any configuration, so just starting it was enough.
+wings@blinky:~$ systemctl start moosefs-cgiserv
+Then I navigated to http://10.1.1.201:9425/mfs.cgi. As we’re not using the default DNS name of “mfsmaster”, I put “10.1.1.201” into the “Input your DNS master name” field and clicked the “Try it !!!” button.
+
+The front page of the MooseFS web interface popped up.
+![The MooseFS front page](/img/2020-09-20-moosefs-front.png)
+
+I clicked on the Servers tab, and could see that it had 1 chunkserver connected. It looked rougly like this (ignore the used space):
+![The MooseFS servers tab](/img/2020-09-20-moosefs-servers.png)
+
