@@ -11,7 +11,7 @@ After ordering the HC2 along with a power supply and case from JiffyShop, I went
 Physically, setting up the HC2 couldn’t be simpler. I carefully slotted the hard drive into place, screwed it in, then installed the case around the unit. Once that was done, I needed to prepare and install the microSD card after loading it with an appropriate image.
 
 ## Getting an OS image
-I decided to start with the official Ubuntu images for the ODROID HC2 (rather than something like Armbian, which I may try later). The ODROID HC2 is a stripped-down version of the ODROID XU4, so it uses the same images as the XU4. As there is no video output, however, it’s usually best to go with the “minimal” images rather than the ones that come with a graphical desktop.
+I decided to start with the official Ubuntu images for the ODROID HC2 (rather than something like Armbian, which I may try later). The ODROID HC2 is a stripped-down version of the ODROID XU4, so it uses [the same images as the XU4](https://wiki.odroid.com/odroid-xu4/os_images/os_images). As there is no video output, however, it’s usually best to go with the “minimal” images rather than the ones that come with a graphical desktop.
 
 I went with the latest Ubuntu 20.04 image, making sure to grab the minimal version (as well as its corresponding md5sum file for an integrity check).
 
