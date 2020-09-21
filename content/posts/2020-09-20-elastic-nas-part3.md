@@ -190,14 +190,14 @@ wings@blinky:~$ sudo nano /etc/mfs/mfshdd.cfg
 
 Start and enable the chunkserver service.
 {{< highlight plaintext >}}
-wings@blinky:~$ systemctl enable moosefs-chunkserver && systemctl start moosefs-chunkserver
+wings@blinky:~$ sudo systemctl enable moosefs-chunkserver && sudo systemctl start moosefs-chunkserver
 {{< / highlight >}}
 
 ## Web interface
 The final service was “moosefs-cgiserv”, which provides a web interface for MooseFS. Unlike the other services, it doesn’t require any configuration, so just starting it was enough.
 
 {{< highlight plaintext >}}
-wings@blinky:~$ systemctl start moosefs-cgiserv
+wings@blinky:~$ sudo systemctl enable moosefs-cgiserv && sudo systemctl start moosefs-cgiserv
 {{< / highlight >}}
 
 Then I navigated to http://10.1.1.201:9425/mfs.cgi. As we’re not using the default DNS name of “mfsmaster”, I put “10.1.1.201” into the “Input your DNS master name” field and clicked the “Try it !!!” button.
