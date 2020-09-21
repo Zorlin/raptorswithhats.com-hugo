@@ -250,7 +250,7 @@ On the frontpage the new chunks were listed in the "chunk matrix" table.
 
 ![The MooseFS "chunk matrix"](/img/2020-09-20-moosefs-chunk-matrix.png)
 
-Within MooseFS, there's the concept of goals - a setting which defines how many copies a given file or folder you want to aim for. Each chunkserver can only contribute one copy. The default is "2", so the chunks I had just created had a goal of 2. As there's only one chunkserver at this stage, they are listed as "undergoal"/"endangered". I will go into more detail about goals in a later post.
+Within MooseFS, files and folders each have a "goal". This goal determines how many copies of that file or folder MooseFS should maintain, and (if configured) where in the cluster to store those copies. By default, each chunkserver can only contribute one copy towards the goal, regardless of the number of bricks on it. This helps ensure that a major server failure won't result in a loss of data. The default goal is "2", so the chunks I had just created had a goal of 2. As there was only one working chunkserver, the chunks were listed as "undergoal"/"endangered. I will go into more detail about goals in a later post.
 
 ## Client
 I had a working MooseFS filesystem, but when mounting it I still needed to specify a mountpoint and tell the MooseFS client which master to connect to. With a final bit of configuration, I could set some defaults for mounting MooseFS via the client configuration.
