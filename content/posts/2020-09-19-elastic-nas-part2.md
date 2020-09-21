@@ -41,7 +41,7 @@ There are plenty of methods you can use to burn a disk image to an SD card, but 
 ![Burning an image](/img/2020-09-19-hc2-sdcard.png)
 
 ## First boot
-I gently installed the microSD card into the HC2, plugged in the Ethernet cable, then turned it on. After a couple of minutes, the HC2 showed up in my router as a new device, a default hostname of “odroid” and a DHCP-provided address.
+I gently installed the microSD card into the HC2, plugged in the Ethernet cable, then turned it on. After a couple of minutes, the HC2 showed up in my router as a new device, with a default hostname of “odroid” and a DHCP-provided address.
 
 ![The HC2 showing on my router](/img/2020-09-19-hc2-router.png)
 
