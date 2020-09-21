@@ -292,15 +292,21 @@ mfs#10.1.1.201:9421  3.7T     0  3.7T  1% /mnt/mfs
 
 ## Benchmarking
 I used the same quick-and-dirty DD command from Part 2 so we could see the performance impact of using MooseFS instead of writing directly to a local hard drive.
+
+{{< highlight plaintext >}}
 root@blinky:/mnt/mfs# dd if=/dev/zero of=./largefile bs=1M count=1024
 1024+0 records in
 1024+0 records out
 1073741824 bytes (1.1 GB, 1.0 GiB) copied, 6.95196 s, 154 MB/s
 And I used a similar command to check the read speeds…
+{{< / highlight >}}
+
+{{< highlight plaintext >}}
 root@blinky:/mnt/mfs# dd if=./largefile of=/dev/null
 2097152+0 records in
 2097152+0 records out
 1073741824 bytes (1.1 GB, 1.0 GiB) copied, 11.2736 s, 95.2 MB/s
+{{< / highlight >}}
 
 Write speeds of 154MB/s and read speeds of 95.2MB/s. While these results weren’t quite as fast as the local drive, they are both faster than the Gigabit networking of the unit with all overhead taken into account.
 
