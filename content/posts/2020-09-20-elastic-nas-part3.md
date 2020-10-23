@@ -190,14 +190,14 @@ wings@blinky:~$ sudo nano /etc/mfs/mfshdd.cfg
 
 Start and enable the chunkserver service.
 {{< highlight plaintext >}}
-wings@blinky:~$ systemctl enable moosefs-chunkserver && systemctl start moosefs-chunkserver
+wings@blinky:~$ sudo systemctl enable moosefs-chunkserver && sudo systemctl start moosefs-chunkserver
 {{< / highlight >}}
 
 ## Web interface
 The final service was “moosefs-cgiserv”, which provides a web interface for MooseFS. Unlike the other services, it doesn’t require any configuration, so just starting it was enough.
 
 {{< highlight plaintext >}}
-wings@blinky:~$ systemctl start moosefs-cgiserv
+wings@blinky:~$ sudo systemctl enable moosefs-cgiserv && sudo systemctl start moosefs-cgiserv
 {{< / highlight >}}
 
 Then I navigated to http://10.1.1.201:9425/mfs.cgi. As we’re not using the default DNS name of “mfsmaster”, I put “10.1.1.201” into the “Input your DNS master name” field and clicked the “Try it !!!” button.
@@ -250,7 +250,11 @@ On the frontpage the new chunks were listed in the "chunk matrix" table.
 
 ![The MooseFS "chunk matrix"](/img/2020-09-20-moosefs-chunk-matrix.png)
 
-Within MooseFS, there's the concept of goals - a setting which defines how many copies a given file or folder you want to aim for. Each chunkserver can only contribute one copy. The default is "2", so the chunks I had just created had a goal of 2. As there's only one chunkserver at this stage, they are listed as "undergoal"/"endangered". I will go into more detail about goals in a later post.
+Within MooseFS, files and folders each have a "goal". This goal determines how many copies of that file or folder MooseFS should maintain, and (if configured) where in the cluster to store those copies. 
+
+By default, each chunkserver can only contribute one copy towards the goal, regardless of the number of bricks on it. This helps ensure that a major server failure won't result in a loss of data. 
+
+The default goal is "2", so the chunks I had just created had a goal of 2. As there was only one working chunkserver, the chunks were listed as "undergoal"/"endangered. I will go into more detail about goals in a later post.
 
 ## Client
 I had a working MooseFS filesystem, but when mounting it I still needed to specify a mountpoint and tell the MooseFS client which master to connect to. With a final bit of configuration, I could set some defaults for mounting MooseFS via the client configuration.
@@ -292,15 +296,22 @@ mfs#10.1.1.201:9421  3.7T     0  3.7T  1% /mnt/mfs
 
 ## Benchmarking
 I used the same quick-and-dirty DD command from Part 2 so we could see the performance impact of using MooseFS instead of writing directly to a local hard drive.
+
+{{< highlight plaintext >}}
 root@blinky:/mnt/mfs# dd if=/dev/zero of=./largefile bs=1M count=1024
 1024+0 records in
 1024+0 records out
 1073741824 bytes (1.1 GB, 1.0 GiB) copied, 6.95196 s, 154 MB/s
+{{< / highlight >}}
+
 And I used a similar command to check the read speeds…
+
+{{< highlight plaintext >}}
 root@blinky:/mnt/mfs# dd if=./largefile of=/dev/null
 2097152+0 records in
 2097152+0 records out
 1073741824 bytes (1.1 GB, 1.0 GiB) copied, 11.2736 s, 95.2 MB/s
+{{< / highlight >}}
 
 Write speeds of 154MB/s and read speeds of 95.2MB/s. While these results weren’t quite as fast as the local drive, they are both faster than the Gigabit networking of the unit with all overhead taken into account.
 
