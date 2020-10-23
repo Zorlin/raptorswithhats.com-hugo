@@ -309,4 +309,4 @@ Having tested MooseFS on the HC2, I was sold on the concept. I pulled the trigge
 
 ![The MooseFS "chunk matrix"](/img/2020-09-20-hardkernel-hc2-order.png)
 
-Join us next time, where we’ll expand to 3 more nodes and talk about how goals work.
+Join us next time, where we’ll expand to a second node and talk about how goals work.
