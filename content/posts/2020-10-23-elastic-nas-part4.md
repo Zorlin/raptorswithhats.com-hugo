@@ -101,6 +101,8 @@ wings@pinky:~$ sudo systemctl enable moosefs-chunkserver && sudo systemctl start
 
 And saw it pop up in the MooseFS web interface.
 
+Now that I had two chunkservers up and running, all the existing data in the cluster was automatically replicated across both. This is because I had left the initial goal of goal=2 alone. After replication finished, all the "undergoal" chunks were now "stable" and the cluster looked very healthy.
+
 ## Metalogger
 Next up, it was time to set up the first metalogger for the cluster. (If you were wondering, there's nothing stopping us from setting up a metalogger on the same node as the master. It wouldn't do anything useful, though, so there's no real point to doing so).
 
@@ -158,9 +160,6 @@ wings@pinky:~$ sudo nano /etc/fstab
 mfsmaster: /mnt/mfs moosefs defaults,mfsdelayedinit 0 0
 {{< / highlight >}}
 
-## Goals
-Now that I had two chunkservers up and running, all the existing data in the cluster was automatically replicated across both. This is because I had left the initial goal of goal=2 alone. After replication finished, all the "undergoal" chunks were now "stable" and the cluster looked very healthy.
-
 ## Media and Samba (Windows File Sharing)
 It was time to add some basic services to make this NAS work like... well, a NAS. Adding Samba would allow me to use SMB (Windows File Sharing) to access and store media. I decided to add it to node #1 (blinky).
 
@@ -205,4 +204,31 @@ Added user media.
 {{< / highlight >}}
 
 With all that out of the way, finally, I could start using the NAS properly.
+
+## Action Shot
+![HC2s in action](/img/2020-10-23-hc2-in-action.jpg)
+
+This was my setup for a little while. When treated as separate units like this, active cooling isn't super necessary. Handily, my VDSL router happened to have a 4-port gigabit switch built into it, so I was able to use it to provide simple networking.
+
+However, this setup didn't look particularly neat and I was a little concerned about leaving things exposed like that.
+
+## A LACK of Colour
+I decided to get a "LACK" table from IKEA - initially to neaten things up, but possibly to mount some hardware in later. For those unfamiliar with the ["LackRack"](https://wiki.eth0.nl/index.php/LackRack), the LACK side table happens to have the same inner width as a standard server rack.
+
+With the LACK in hand I did a "test fit", setting up all 4 units as though all were in service - complete with colour-coded Ethernet cables.
+
+![Four HC2s on a LACK table](/img/2020-10-23-LACK-testfit.jpg)
+
+I actually really liked the look, so I kept everything stacked in that configuration. You might notice that only two units were powered at this stage.
+
+![Final configuration for a while](/img/2020-10-23-hc2-finalfit.jpg)
+
+## Cool noises
+I'm still not 100% sure why, but with all the units stacked up like that - heat eventually became a problem despite only having two of the units powered. 
+
+While I could easily go back to the previous setup, that would be a temporary fix at best. I'd still need to solve the problem eventually, and it would only get worse with all 4 units in service.
+
+My evil plan was to find a decent 120mm fan that I could power using 5v - allowing me to power it using the USB ports on the back of the HC2s. My initial search didn't turn up anything super promising.
+
+As a stopgap measure, I found a desk fan that was just the right size to point at the cluster. Unfortunately, this didn't last forever - consumer desk fans aren't really meant to run 24/7 and it eventually ate itself.
 
