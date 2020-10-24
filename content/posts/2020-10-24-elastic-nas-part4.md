@@ -1,9 +1,9 @@
 ---
 title: "The Elastic NAS: Part 4 - The second node"
-date: 2020-10-23T14:33:30+08:00
+date: 2020-10-24T11:03:13+08:00
 Categories: [storage]
 Tags: ['storage','nas','elasticnas','moosefs']
-draft: true
+draft: false
 ---
 
 ## Arrival
@@ -228,7 +228,40 @@ I'm still not 100% sure why, but with all the units stacked up like that - heat 
 
 While I could easily go back to the previous setup, that would be a temporary fix at best. I'd still need to solve the problem eventually, and it would only get worse with all 4 units in service.
 
-My evil plan was to find a decent 120mm fan that I could power using 5v - allowing me to power it using the USB ports on the back of the HC2s. My initial search didn't turn up anything super promising.
+My evil plan was to find a decent 120mm fan that I could power using 5v - allowing me to power it using the USB ports on the back of the HC2s. Combined with the fan shroud, this would keep the stack cool, and a low power fan would be quiet. My initial search didn't turn up anything super promising.
 
 As a stopgap measure, I found a desk fan that was just the right size to point at the cluster. Unfortunately, this didn't last forever - consumer desk fans aren't really meant to run 24/7 and it eventually ate itself.
 
+## For $5, what did you expect?
+I went to the shops to see if I could find anything to use as a *new* stopgap measure. There were a few desk fans - that could work! - except that they were far too big and wouldn't fit under the top LACK table (which I had added to neaten things up further).
+
+Then, at my local electronics shop, I [struck gold](https://www.jbhifi.com.au/products/flea-market-usb-desk-fan-black-gold) - 
+
+![USB fan](/img/2020-10-23-usbfan.jpg)
+
+I found a USB fan on clearance for $5. Awesome!
+
+I need to point out that the Elastic NAS was physically located right next to the couch - it had to be quiet, and any noise it made needed to be easy to ignore. This fan did not meet either criteria. While it performed surprisingly well in terms of efficiently moving air, it was whiny and made weird noises. Drat, back to the drawing board.
+
+Meanwhile, my brother in law had kindly 3D printed the fan shroud for me. Since beginning the project, I had decided on a [slightly different design](https://www.thingiverse.com/thing:3113439) which was based on the original but was designed to force more air through the HC2s.
+
+![The new shroud design](/img/2020-10-23-newshroud.jpg)
+
+## Fan-tastic
+I had the shroud in-hand, but no fan and no power solution. I continued researching for a while and found that there were no really great options for powering 120mm fans via USB - very few fans were rated to run at 5v and likely wouldn't even spin up.
+
+One option was to get a Molex-to-fan-header adapter and then a 12v power supply with a Molex output. Then I could power a high quality 12v fan. While looking into this, however, I found a 12v power supply with a barrel-style plug, as well as a fan adapter that worked with that. Simple!
+
+I went ahead and bought a 12v 120mm Noctua fan and put it all together. Handily it came with a resistor to run the fan at a lower, quieter speed.
+
+Here's the complete fan setup, taken when I was test-fitting the shroud in the kitchen. We've got a barrel-plug style power suppy, feeding a fan adapter, feeding a resistor, feeding the actual fan.
+
+![The final cooling setup](/img/2020-10-23-cooling-testfit.jpg)
+
+And here it is fully functional and attached to the Elastic NAS, which had grown to 3 nodes by this point.
+
+![Elastic NAS fitted with the final cooling setup](/img/2020-10-23-hc2-finalcooling.jpg)
+
+My goal was to have a very quiet cooling solution, and as it turns out I couldn't hear any significant noise from as close as 15cm away. I was ecstatic.
+
+Join us next time as we complete the build and talk about goals and snapshots.
