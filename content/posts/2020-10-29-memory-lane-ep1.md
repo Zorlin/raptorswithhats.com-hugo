@@ -6,7 +6,7 @@ Tags: ['gaming','hacking','memory editing','cheats']
 draft: false
 ---
 
-Kicking off the series, the first game we’ll be looking at is Hill Climb Racing. Our strategy will be simple memory editing, and the first goal is to unlock everything.
+Kicking off the series, the first game we’ll be looking at is Hill Climb Racing. Our strategy for today will be simple memory editing.
 
 The first thing I'll need to do is reset my progress in the game. This is easily accomplished by opening up the game, signing out of Google Play Games, then going into settings and clearing data for the app.
 
