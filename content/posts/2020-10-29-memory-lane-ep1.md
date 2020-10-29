@@ -64,7 +64,7 @@ We are left with a single address, which I save by hitting the save icon. Then I
 
 Let's try setting it to 2 billion coins.
 
-![The modify value screen, setting 2 billion coins](/img/2020-10-29-memlane-ep1-modify1.png)
+![The modify value screen, setting 2 billion coins](/img/2020-10-29-memlane-ep1-modify2.png)
 ![Success - 2 billion coins](/img/2020-10-29-memlane-ep1-2billioncoins.png)
 
 And we've done it - we now have more coins than you could ever need.
