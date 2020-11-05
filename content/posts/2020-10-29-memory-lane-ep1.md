@@ -153,7 +153,7 @@ Up to 9, search again... and we got it.
 ![Results page](/img/2020-10-29-memlane-ep1-results9.png)
 
 Let's set this result to 1000.
-![Changing the number of boosters we're purchasing](/img/2020-10-29-memlane-ep1-modify4.png)
+![Changing the number of boosters we're purchasing](/img/2020-10-29-memlane-ep1-modify5.png)
 
 Then, without changing anything else, let's hit the purchase button.
 
